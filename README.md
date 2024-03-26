@@ -19,22 +19,23 @@ nvim=nvim.appimage
 alias v=nvim.appimage
 ```
 
-1. Backup your existing Neovim config and run the below command
+**1. Backup your existing Neovim config and run the below command**
 ```bash
 # WARNING: This will delete your nvim config and installed plugins
 rm -rf ~/.config/nvim
 rm -rf ~/.local/share/nvim
 ```
 
-2. Clone repo into `~/.config/nvim` folder
+**2. Clone repo into `~/.config/nvim` folder**
 ```
 git clone https://github.com/BennyThadikaran/nvim-config.git ~/.config/nvim
 ```
 
-3. On opening `neovim`:
-    - Lazy should begin installing plugins. Run `:Lazy` to check installed plugins.
-    - Mason should install LSPs, formatters etc. Run `:MasonInstall` if not triggered.
-    - Treesitter should install language parsers. Run `:TSUpdate` to be sure.
+**3. On opening `neovim`:**
+
+- Lazy should begin installing plugins. Run `:Lazy` to check installed plugins.
+- Mason should install LSPs, formatters etc. Run `:MasonInstall` if not triggered.
+- Treesitter should install language parsers. Run `:TSUpdate` to be sure.
 
 ## Configuration Info
 

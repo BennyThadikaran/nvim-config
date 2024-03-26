@@ -25,6 +25,15 @@ return {
 					package_uninstalled = "✗",
 				},
 			},
+			ensure_installed = {
+				"tsserver",
+				"lua_ls",
+				"pyright",
+				"jsonls",
+				"prettierd",
+				"black",
+				"stylua",
+			},
 		})
 
 		mason_lspconfig.setup({})

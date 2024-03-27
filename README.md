@@ -53,6 +53,42 @@ I disabled many builtin plugins except `netrw` in `lua/dev/lazy.lua` to keep the
 
 Lastly i know just the bare basics of Lua and enough neovim for setup/daily use. If you run into problems be prepared to experiment/research on your own. :stuck_out_tongue_winking_eye:
 
+## Plugins
+
+[Lazy](https://github.com/folke/lazy.nvim) - Package manager
+
+[Gruvbox](https://github.com/morhetz/gruvbox) - Colorscheme
+
+[Staline](https://github.com/tamton-aquib/staline.nvim) - Statusline and bufferline
+
+[Autopairs](https://github.com/windwp/nvim-autopairs) - Auto completion for `{}`, `()`, `""`etc
+
+[Surround](https://github.com/kylechui/nvim-surround) - Add, delete or change `()`, `""` etc around text
+
+[Comment](https://github.com/numToStr/Comment.nvim) - Toggle code comments
+
+[Indent-blankline](https://github.com/lukas-reineke/indent-blankline.nvim) - Adds indent lines in code.
+
+[Colorizer](https://github.com/NvChad/nvim-colorizer.lua) - Color highlighter
+
+[Treesitter](https://github.com/nvim-treesitter/nvim-treesitter) - Improved language specific syntax highlighting. Atleast that's what i use it for 😺
+
+#### Autocompletion and LSP
+
+[Lspconfig](https://github.com/neovim/nvim-lspconfig) - LSP config setup
+
+[Mason](https://github.com/williamboman/mason.nvim) - Package manager to install LSPs, formatter, Linter etc.
+
+[None-ls](https://github.com/nvimtools/none-ls.nvim) - Null-ls fork, interacts with LSP to provide linting, formatting and other actions.
+
+[lsp_signature](https://github.com/ray-x/lsp_signature.nvim) - Display function signature as you type
+
+[hrsh7th/nvim-cmp](https://github.com/hrsh7th/nvim-cmp) - Autocompletion engine. A few other plugins acts as completion sources like [cmp-buffer](https://github.com/hrsh7th/cmp-buffer) (buffers), [cmp-path](https://github.com/hrsh7th/cmp-path) (Filepaths) 
+
+[LuaSnip](https://github.com/L3MON4D3/LuaSnip) - Snippet completion engine
+
+[friendly-snippets](https://github.com/rafamadriz/friendly-snippets) - A collection of usefull snippets
+
 ## Learning Resources
 
 [Vim Tutorials - TheFrugalComputerGuy](https://www.youtube.com/playlist?list=PLy7Kah3WzqrEjsuvhT46fr28Q11oa5ZoI) - YouTube

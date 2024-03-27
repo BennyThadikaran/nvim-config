@@ -10,12 +10,12 @@ I primarily code in Python (Occasional JS, Bash).
 ## Setup on Linux
 Make sure to install the latest Neovim package or use an AppImage.
 
-For AppImage store them in a local runtime path (use `echo $PATH` in terminal to see your runtime paths). Make sure it is executable.
+For AppImage, place them in a local runtime path and make it executable. I placed mine in `~/bin/` ([See other options](https://unix.stackexchange.com/a/36874)).
+Run `echo $PATH` in terminal to check your runtime paths.
 
-I have the following alias stored in `~/.bash_aliases`
+I have the following alias stored in `~/.bash_aliases`, so i use `v` in terminal to start neovim.
 
 ```
-nvim=nvim.appimage
 alias v=nvim.appimage
 ```
 

@@ -30,7 +30,7 @@ return {
 				"lua_ls",
 				"pyright",
 				"jsonls",
-				"prettierd",
+				"prettier",
 				"black",
 				"stylua",
 			},

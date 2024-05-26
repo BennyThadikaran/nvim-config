@@ -41,10 +41,6 @@ vim.api.nvim_create_autocmd("FileType", {
 	end,
 })
 
-vim.cmd([[
-  autocmd BufWritePre * lua require('guard.format').do_fmt()
-]])
-
 -- clear search highlights
 keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
 

@@ -54,7 +54,10 @@ opt.swapfile = false
 
 -- netrw
 vim.g.netrw_keepdir = 0
-vim.g.netrw_winsize = 35
+vim.g.netrw_winsize = 30
 vim.g.netrw_banner = 0
+vim.g.netrw_browse_split = 1
 vim.g.netrw_liststyle = 3
 vim.g.netrw_localcopydircmd = "cp -r"
+
+vim.g.python3_host_prog = "~/Documents/python/pynvim/bin/python3"

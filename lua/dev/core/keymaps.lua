@@ -54,6 +54,7 @@ keymap.set("n", "<leader>sh", "<C-w>s", { desc = "Split window horizontally" }) 
 keymap.set("n", "<leader>se", "<C-w>=", { desc = "Make splits equal size" }) -- make split windows equal width & height
 keymap.set("n", "<leader>sx", "<cmd>close<CR>", { desc = "Close current split" }) -- close current split window
 
+-- Tabs
 keymap.set("n", "<leader>to", "<cmd>tabnew<CR>", { desc = "Open new tab" }) -- open new tab
 keymap.set("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "Close current tab" }) -- close current tab
 keymap.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" }) --  go to next tab
@@ -64,12 +65,6 @@ keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer
 keymap.set("n", "<Tab>", ":bnext <CR>", { desc = "Next Buffer" })
 keymap.set("n", "<S-Tab>", ":bprevious <CR>", { desc = "Previous Buffer" })
 keymap.set("n", "<leader>d", ":bd! <CR>", { desc = "Delete Buffer" })
-
--- tabs
-keymap.set("n", "<leader>t", ":tabnew<CR>", { desc = "New Tab" })
-keymap.set("n", "<leader>x", ":tabclose<CR>", { desc = "Close Tab" })
-keymap.set("n", "<leader>j", ":tabprevious<CR>", { desc = "Previous Tab" })
-keymap.set("n", "<leader>k", ":tabnext<CR>", { desc = "Next Tab" })
 
 -- netrw
 keymap.set("n", "<leader>dd", ":Lexplore %:p:h<CR>", { desc = "Open Netrw in current file dir", noremap = true })

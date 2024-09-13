@@ -1,17 +1,21 @@
 # Nvim-config
+
 This is my personal [Neovim](https://neovim.io/) config. Neovim is my default code/text editor.
 
-I currently use Neovim v0.9.5 (AppImage) on Linux Mint 21.3 Cinnamon edition
+I currently use Neovim v0.10.1 (AppImage) on Linux Mint 22 XFCE edition
 
 Most of the config is derived from [Josean-dev's dot files](https://github.com/josean-dev/dev-environment-files). I edited out some parts and made a few additions to suit my needs. You can see his [youtube video](https://www.youtube.com/watch?v=vdn_pKJUda8) to familiarize with the setup.
 
 I primarily code in Python (Occasional JS, Bash).
 
 ## Setup on Linux
+
 Make sure to install the latest Neovim package or use an AppImage.
 
 For AppImage, place them in a local runtime path and make it executable. I placed mine in `~/bin/` ([See other options](https://unix.stackexchange.com/a/36874)).
 Run `echo $PATH` in terminal to check your runtime paths.
+
+You will need Python v3 and NodeJs (to install prettier).
 
 I have the following alias stored in `~/.bash_aliases`, so i use `v` in terminal to start neovim.
 
@@ -20,13 +24,16 @@ alias v=nvim.appimage
 ```
 
 **1. Backup your existing Neovim config and run the below command**
+
 ```bash
 # WARNING: This will delete your nvim config and installed plugins
 rm -rf ~/.config/nvim
 rm -rf ~/.local/share/nvim
+rm -rf ~/.local/state/nvim
 ```
 
 **2. Clone repo into `~/.config/nvim` folder**
+
 ```
 git clone https://github.com/BennyThadikaran/nvim-config.git ~/.config/nvim
 ```
@@ -34,8 +41,18 @@ git clone https://github.com/BennyThadikaran/nvim-config.git ~/.config/nvim
 **3. On opening `neovim`:**
 
 - Lazy should begin installing plugins. Run `:Lazy` to check installed plugins.
-- Mason should install LSPs, formatters etc. Run `:MasonInstall` if not triggered.
+- Mason should install LSPs - pyright (python), lua_ls (lua), json_ls (json) . Run `:MasonInstall` if not triggered.
 - Treesitter should install language parsers. Run `:TSUpdate` to be sure.
+
+**4. Install formatters with `:MasonInstall`**
+
+`:MasonInstall black isort prettier stylua debugpy`
+
+**5. To setup python3 provider for nvim.**
+
+- It is defined in `/lua/dev/core/options.lua` as `vim.g.python3_host_prog`.
+- Create a python virtual env using venv and install pynvim (`pip install pynvim`).
+- Edit the filepath in `options.lua` to the newly created venv folder.
 
 ## Configuration Info
 
@@ -57,7 +74,7 @@ Lastly i know just the bare basics of Lua and enough neovim for setup/daily use.
 
 [Lazy](https://github.com/folke/lazy.nvim) - Package manager
 
-[Gruvbox](https://github.com/morhetz/gruvbox) - Colorscheme
+[Gruvbox-material](https://github.com/sainnhe/gruvbox-material) - Colorscheme
 
 [Staline](https://github.com/tamton-aquib/staline.nvim) - Statusline and bufferline
 
@@ -83,11 +100,33 @@ Lastly i know just the bare basics of Lua and enough neovim for setup/daily use.
 
 [lsp_signature](https://github.com/ray-x/lsp_signature.nvim) - Display function signature as you type
 
-[hrsh7th/nvim-cmp](https://github.com/hrsh7th/nvim-cmp) - Autocompletion engine. A few other plugins acts as completion sources like [cmp-buffer](https://github.com/hrsh7th/cmp-buffer) (buffers), [cmp-path](https://github.com/hrsh7th/cmp-path) (Filepaths) 
+[hrsh7th/nvim-cmp](https://github.com/hrsh7th/nvim-cmp) - Autocompletion engine. A few other plugins acts as completion sources like [cmp-buffer](https://github.com/hrsh7th/cmp-buffer) (buffers), [cmp-path](https://github.com/hrsh7th/cmp-path) (Filepaths)
 
 [LuaSnip](https://github.com/L3MON4D3/LuaSnip) - Snippet completion engine
 
 [friendly-snippets](https://github.com/rafamadriz/friendly-snippets) - A collection of usefull snippets
+
+#### Python debugger
+
+[mfussenegger/nvim-dap](https://github.com/mfussenegger/nvim-dap)
+
+[mfussenegger/nvim-dap-python](https://github.com/mfussenegger/nvim-dap-python)
+
+[rcarriga/nvim-dap-ui](https://github.com/rcarriga/nvim-dap-ui)
+
+I started using the debugger recently. Its quite useful to find issues and bugs in code. I'm still familiarizing with this tool but below is some useful keymaps to get started.
+
+All commands below in normal mode.
+
+To toggle a breakpoint, position the cursor over the line and type `,db`.
+
+`,dc` to start the debugger
+
+`,dr` to terminate debug session
+
+`,ds` to step over next line of code
+
+To set a watch over variables, click the `watches` section, press `i` to enter insert mode, type the variable name to watch and press enter.
 
 ## Learning Resources
 

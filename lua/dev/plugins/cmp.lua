@@ -2,10 +2,10 @@ return {
   "hrsh7th/nvim-cmp",
   event = "InsertEnter",
   dependencies = {
-    "hrsh7th/cmp-buffer",           -- source for text in buffer
-    "hrsh7th/cmp-path",             -- source for file system paths
-    "L3MON4D3/LuaSnip",             -- snippet engine
-    "saadparwaiz1/cmp_luasnip",     -- for autocompletion
+    "hrsh7th/cmp-buffer",         -- source for text in buffer
+    "hrsh7th/cmp-path",           -- source for file system paths
+    "L3MON4D3/LuaSnip",           -- snippet engine
+    "saadparwaiz1/cmp_luasnip",   -- for autocompletion
     "rafamadriz/friendly-snippets", -- useful snippets
   },
   config = function()
@@ -31,7 +31,7 @@ return {
         ["<C-b>"] = cmp.mapping.scroll_docs(-4),
         ["<C-f>"] = cmp.mapping.scroll_docs(4),
         ["<C-Space>"] = cmp.mapping.complete(), -- show completion suggestions
-        ["<C-e>"] = cmp.mapping.abort(),        -- close completion window
+        ["<C-e>"] = cmp.mapping.abort(),    -- close completion window
         ["<CR>"] = cmp.mapping.confirm({ select = true }),
         ["<Tab>"] = cmp.mapping(function(fallback)
           if cmp.visible() then
@@ -48,6 +48,7 @@ return {
           "i",
           "s",
         }),
+
         ["<S-Tab>"] = cmp.mapping(function(fallback)
           if cmp.visible() then
             cmp.select_prev_item()
@@ -65,8 +66,8 @@ return {
       sources = cmp.config.sources({
         { name = "nvim_lsp" },
         { name = "luasnip" }, -- snippets
-        { name = "buffer" },  -- text within current buffer
-        { name = "path" },    -- file system paths
+        { name = "buffer" }, -- text within current buffer
+        { name = "path" }, -- file system paths
       }),
     })
   end,

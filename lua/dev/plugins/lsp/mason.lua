@@ -12,7 +12,6 @@ return {
 
 		-- enable mason and configure icons
 		mason.setup({
-			log_level = vim.log.levels.OFF,
 			max_concurrent_installers = 8,
 			pip = {
 				-- upgrade pip to latest version in venv before install
@@ -25,17 +24,15 @@ return {
 					package_uninstalled = "✗",
 				},
 			},
+		})
+
+		mason_lspconfig.setup({
 			ensure_installed = {
-				"tsserver",
 				"lua_ls",
 				"pyright",
 				"jsonls",
-				"prettier",
-				"black",
-				"stylua",
+				-- "ts_ls",
 			},
 		})
-
-		mason_lspconfig.setup({})
 	end,
 }

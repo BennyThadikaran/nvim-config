@@ -133,3 +133,14 @@ To set a watch over variables, click the `watches` section, press `i` to enter i
 [Vim Tutorials - TheFrugalComputerGuy](https://www.youtube.com/playlist?list=PLy7Kah3WzqrEjsuvhT46fr28Q11oa5ZoI) - YouTube
 
 [Everything you need to know to configure neovim using lua](https://vonheikemen.github.io/devlog/tools/configuring-neovim-using-lua/)
+
+## Screenshot
+
+### Startup
+![nvim startup view](https://res.cloudinary.com/doyu4uovr/image/upload/s--mu2nZcil--/c_scale,f_auto,w_1366/v1726294887/nvim/nvim-startup-view_ckub17.png)
+
+### Python code
+![nvim-python-code-view](https://res.cloudinary.com/doyu4uovr/image/upload/s--x7KiZeuN--/f_auto/v1726294887/nvim/nvim-python-code-view_nbdjzh.png)
+
+### Python debugger
+![Python debug](https://res.cloudinary.com/doyu4uovr/image/upload/s--jHEl9Lki--/f_auto/v1726294887/nvim/python-debug-dap_rqbsgo.png)

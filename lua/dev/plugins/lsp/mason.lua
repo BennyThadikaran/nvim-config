@@ -31,7 +31,7 @@ return {
 				"lua_ls",
 				"pyright",
 				"jsonls",
-                "clangd",
+				"clangd",
 				-- "ts_ls",
 			},
 		})

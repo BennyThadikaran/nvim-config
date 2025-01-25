@@ -59,6 +59,8 @@ return {
 
     lspconfig["jsonls"].setup({})
 
+    lspconfig["clangd"].setup({})
+
     -- configure lua server (with special settings)
     lspconfig["lua_ls"].setup({
       capabilities = capabilities,

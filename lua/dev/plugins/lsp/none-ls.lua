@@ -21,6 +21,7 @@ return {
 				formatting.stylua, -- lua formatter
 				formatting.prettier,
 				formatting.isort,
+				formatting.clang_format,
 				formatting.black.with({
 					extra_args = { "-l", "80" },
 				}),

@@ -18,6 +18,7 @@ return {
           "python",
           "markdown",
           "bash",
+          "c",
         },
       })
     end,

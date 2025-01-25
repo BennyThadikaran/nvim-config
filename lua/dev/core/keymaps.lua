@@ -67,16 +67,17 @@ keymap.set("n", "<S-Tab>", ":bprevious <CR>", { desc = "Previous Buffer" })
 keymap.set("n", "<leader>d", ":bd! <CR>", { desc = "Delete Buffer" })
 
 -- netrw
-function _G.toggle_netrw()
-  local num = vim.fn.bufwinnr("^Netrw")
-
-  if num ~= -1 then
-    vim.cmd(tostring(num) .. "wincmd w")
-    vim.cmd("q")
-  else
-    vim.cmd("Lexplore %:p:h")
-  end
-end
+-- function _G.toggle_netrw()
+--   local num = vim.fn.bufwinnr("^Netrw")
+--
+--   if num ~= -1 then
+--     vim.cmd(tostring(num) .. "wincmd w")
+--     vim.cmd("q")
+--   else
+--     vim.cmd("Vexplore %:p:h")
+--   end
+-- end
 
 -- Use :ToggleNetrw to toggle netrw (Opens current file directory)
-keymap.set("n", "<leader>f", ":lua toggle_netrw()<CR>", { desc = "Open Netrw in current file dir", noremap = true })
+-- keymap.set("n", "<leader>f", ":lua toggle_netrw()<CR>", { desc = "Open Netrw in current file dir", noremap = true })
+keymap.set("n", "<leader>f", ":Neotree toggle<CR>", { desc = "Toggle Neotree", noremap = true })

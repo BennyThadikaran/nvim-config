@@ -25,6 +25,7 @@ require("lazy").setup({ { import = "dev.plugins" }, { import = "dev.plugins.lsp"
 		cache = { enabled = true },
 		rtp = {
 			disabled_plugins = {
+				"netrwPlugin",
 				"gzip",
 				"osc52",
 				"tarPlugin",

@@ -37,7 +37,7 @@ vim.api.nvim_create_autocmd("FileType", {
 vim.api.nvim_create_autocmd("FileType", {
   pattern = "c",
   callback = function(args)
-    vim.keymap.set("n", "<leader>e", ":w<CR>:!gcc % -o %:r && ./%:r<CR>")
+    vim.keymap.set("n", "<leader>e", ":w<CR>:!gcc % -o %:r -O -W -Wall -pedantic -ansi -lm -std=c99 && ./%:r<CR>")
   end,
 })
 

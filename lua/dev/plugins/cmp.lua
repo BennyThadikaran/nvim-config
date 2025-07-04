@@ -7,7 +7,7 @@ return {
 			default = { "lsp", "path", "snippets", "buffer", "omni" },
 		},
 		keymap = {
-			preset = "default",
+			preset = "enter",
 			["<Tab>"] = {
 				function(cmp)
 					if cmp.snippet_active() then

@@ -23,6 +23,12 @@ vim.api.nvim_create_autocmd("LspAttach", {
 
 		opts.desc = "Restart LSP"
 		map("n", "<leader>rs", ":LspRestart<CR>", opts)
+
+		opts.desc = "Show documentation for what is under cursor"
+		map("n", "K", vim.lsp.buf.hover, opts)
+
+		opts.desc = "Show buffer diagnostics"
+		map("n", "<leader>D", ":lua require('fzf-lua').diagnostics_document()<CR>", opts)
 	end,
 })
 

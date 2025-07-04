@@ -6,13 +6,11 @@ vim.cmd("filetype plugin on")
 vim.g.loaded_node_provider = 0
 vim.g.loaded_perl_provider = 0
 
-opt.cc = "80"
 opt.wildmenu = true
 opt.relativenumber = true -- show relative line numbers
 opt.number = true -- shows absolute line number on cursor line (when relative number is on)
 opt.syntax = "ON"
 opt.backup = false
-opt.wrap = true
 opt.showtabline = 2
 
 -- tabs & indentation

@@ -3,6 +3,9 @@ return {
 	version = "1.*",
 	event = "InsertEnter",
 	opts = {
+		sources = {
+			default = { "lsp", "path", "snippets", "buffer", "omni" },
+		},
 		keymap = {
 			preset = "default",
 			["<Tab>"] = {

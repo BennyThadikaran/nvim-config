@@ -5,7 +5,14 @@ return {
 		config = function()
 			require("staline").setup({
 				defaults = {
-					line_column = "%l/%L %c% ",
+					line_column = "%Y %l/%L %c% ",
+					true_colors = true,
+					full_path = true,
+					cool_symbol = " ",
+				},
+				sections = {
+					left = { "- ", "-mode", "left_sep", "file_name" },
+					mid = {},
 				},
 			})
 

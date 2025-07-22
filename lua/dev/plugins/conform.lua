@@ -22,6 +22,7 @@ return {
 			css = { "prettier" },
 			html = { "prettier" },
 			markdown = { "prettier" },
+			toml = { "pyproject-fmt" },
 		},
 		format_on_save = {
 			lsp_format = "fallback",

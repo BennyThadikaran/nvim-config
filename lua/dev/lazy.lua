@@ -32,7 +32,6 @@ require("lazy").setup({ { import = "dev.plugins" } }, {
 				"tohtml",
 				"tutor",
 				"zipPlugin",
-				"man",
 				"matchit",
 				"matchparen",
 				"spellfile",

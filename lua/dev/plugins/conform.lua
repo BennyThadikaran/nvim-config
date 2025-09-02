@@ -24,6 +24,11 @@ return {
 			markdown = { "prettier" },
 			toml = { "pyproject-fmt" },
 		},
+		formatters = {
+			ruff_fix = {
+				prepend_args = { "--ignore", "F401" }, -- disable removing unused imports
+			},
+		},
 		format_on_save = {
 			lsp_format = "fallback",
 		},

@@ -3,6 +3,7 @@ return {
 	version = "1.*",
 	event = "InsertEnter",
 	opts = {
+		signature = { enabled = true },
 		sources = {
 			default = { "lsp", "path", "snippets", "buffer", "omni" },
 		},

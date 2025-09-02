@@ -51,3 +51,9 @@ opt.splitbelow = true -- split horizontal window to the bottom
 opt.swapfile = false
 
 vim.g.python3_host_prog = "~/Documents/python/pynvim/bin/python3"
+
+vim.o.foldmethod = "expr"
+vim.wo.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+vim.o.foldlevel = 99 -- 0 will close all folds. 1 - top level folds, 2 and higher - nested folds
+vim.o.foldminlines = 5 -- minimum no of lines required to consider a fold
+vim.o.foldnestmax = 2

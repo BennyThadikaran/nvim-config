@@ -27,7 +27,7 @@ return {
 		},
 		formatters = {
 			ruff_fix = {
-				prepend_args = { "--ignore", "F401" }, -- disable removing unused imports
+				prepend_args = { "check", "--ignore", "F401" }, -- disable removing unused imports
 			},
 		},
 		format_on_save = {

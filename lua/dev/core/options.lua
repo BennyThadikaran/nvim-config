@@ -57,3 +57,6 @@ vim.wo.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 vim.o.foldlevel = 99 -- 0 will close all folds. 1 - top level folds, 2 and higher - nested folds
 vim.o.foldminlines = 5 -- minimum no of lines required to consider a fold
 vim.o.foldnestmax = 2
+
+-- https://github.com/neovim/neovim/issues/14433#issuecomment-1183682651
+vim.g.omni_sql_default_compl_type = "syntax"

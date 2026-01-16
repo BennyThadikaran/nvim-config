@@ -23,6 +23,7 @@ return {
 			html = { "prettier" },
 			markdown = { "prettier" },
 			toml = { "pyproject-fmt" },
+			c = { "clang_format" },
 		},
 		formatters = {
 			ruff_fix = {

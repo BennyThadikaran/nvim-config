@@ -17,6 +17,7 @@ You will need Python v3 and NodeJs (to install prettier). You will also need to 
 rm -rf ~/.config/nvim
 rm -rf ~/.local/share/nvim
 rm -rf ~/.local/state/nvim
+rm -rf ~/.cache/nvim
 ```
 
 **2. Clone repo into `~/.config/nvim` folder**
@@ -33,7 +34,7 @@ git clone https://github.com/BennyThadikaran/nvim-config.git ~/.config/nvim
 
 **4. Install formatters with `:MasonInstall`**
 
-`:MasonInstall ruff prettier stylua shfmt`
+`:MasonInstall ruff pyright pyproject-fmt prettier bash-language-server shfmt stylua lua-language-server clangd clang-format`
 
 **5. To setup python3 provider for nvim.**
 

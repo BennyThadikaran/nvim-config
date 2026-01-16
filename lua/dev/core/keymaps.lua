@@ -36,7 +36,11 @@ vim.api.nvim_create_autocmd("FileType", {
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = "c",
 	callback = function(_)
-		map("n", "<leader>e", ":w<CR>:!gcc % -o %:r -O -W -Wall -pedantic -ansi -lm -std=c99 && ./%:r<CR>")
+		map(
+			"n",
+			"<leader>e",
+			":w<CR>:!gcc -std=c23 -Wall -Wextra -Wpedantic -O0 -g -fsanitize=address,undefined % -o %:r && ./%:r<CR>"
+		)
 	end,
 })
 
